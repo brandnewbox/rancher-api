@@ -13,6 +13,7 @@ module Rancher
       has_many :settings
       has_many :schemas
       has_many :registry, path: '/registries', data_key: 'registries'
+      has_many :volumes
     end
   end
 end

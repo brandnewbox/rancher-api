@@ -7,9 +7,9 @@ require 'rancher/api'
 # with your gem easier. You can also use a different console, if you like.
 
 Rancher::Api.configure do |config|
-  config.url = RANCHER_URL
-  config.access_key = RANCHER_ACCESS_KEY
-  config.secret_key = RANCHER_SECRET_KEY
+  config.url = ENV['RANCHER_URL']
+  config.access_key = ENV['RANCHER_ACCESS_KEY']
+  config.secret_key = ENV['RANCHER_SECRET_KEY']
   config.verbose = true
 end
 
