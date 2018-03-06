@@ -15,6 +15,10 @@ module Rancher
       def stack
         stackId ? Stack.find(project_id: project.id, id: stackId) : nil
       end
+
+      def storage_driver
+        storageDriverId ? StorageDriver.find(id: storageDriverId) : nil
+      end
     end
   end
 end
