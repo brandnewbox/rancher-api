@@ -4,10 +4,9 @@ module Rancher
       include Her::Model
       include Helpers::Model
 
-      collection_path '/v2-beta/projects/:project_id/stacks'
-
       belongs_to :project
       has_many :services
+      has_many :volumes
 
       def project_id
         accountId
