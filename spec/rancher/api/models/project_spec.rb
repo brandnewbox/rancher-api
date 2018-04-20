@@ -29,17 +29,6 @@ describe Rancher::Api::Project do
   context 'relationships' do
     let(:project) { index.first }
 
-    context '#machines' do
-      let(:machines) do
-        VCR.use_cassette('projects/machines') do
-          project.machines.to_a
-        end
-      end
-
-      it { expect(machines.size).to eq(2) }
-      it { expect(machines.first).to be_instance_of(Rancher::Api::Machine) }
-    end
-
     context '#stacks' do
       let(:stacks) do
         VCR.use_cassette('projects/stacks') do
