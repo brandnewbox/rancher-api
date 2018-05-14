@@ -8,6 +8,12 @@ module Rancher
 
       belongs_to :project
       has_many :services
+
+      actions_without_params [:activateservices, :addoutputs, :cancelupgrade, 
+          :deactivateservices, :error, :exportconfig, :finishupgrade,
+          :rollback,:upgrade]
+
+
     end
   end
 end
