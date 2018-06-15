@@ -41,6 +41,9 @@ module Rancher
           puts "--> Finishing upgrade"
           run_finishupgrade
           wait_for_state_with_params('active')
+          return 'active'
+        else
+          return 'upgraded'
         end
       end
 
