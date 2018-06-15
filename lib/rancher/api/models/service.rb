@@ -30,7 +30,7 @@ module Rancher
         # Can't upgrade a service if it's not in active state
         if state != 'active'
           puts "--> Service cannot be updated due to its current state: #{state}"
-          return          
+          return state          
         end
 
         puts "--> Upgrading"
